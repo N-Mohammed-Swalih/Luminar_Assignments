@@ -1,4 +1,5 @@
 import 'package:assignment/Home_page.dart';
+import 'package:assignment/registration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,12 +22,19 @@ class _LoginPageState extends State<LoginPage> {
           key: formkey, // this key used to fetch the current state of the form
           child: Column(
             children: [
-              const SizedBox(height: 300,),
+              const SizedBox(height: 250,),
               Text("Login",
               style: GoogleFonts.roboto(
-                fontSize: 40,
+                fontSize: 50,
                 fontWeight: FontWeight.bold,
               ),),
+              SizedBox(height: 10,),
+              Center(
+                child: Text("Welcome Back! Login with your credentials",
+                style: TextStyle(
+                  color: Colors.grey,
+                ),),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 20.0, left: 10, right: 10),
                 child: TextFormField(
@@ -79,7 +87,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Center(
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(fixedSize: const Size(350, 50),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    fixedSize: const Size(350, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)
                   )
@@ -102,6 +112,16 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Text("Login")),
               ),
+              SizedBox(height: 10,),
+              Center(
+                child: TextButton(onPressed: (){
+                  Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => RegistrationPage()));
+                },child: Text("Do you have an account? Sign Up",
+                style: TextStyle(
+                  color: Colors.grey
+                ),)),
+              )
             ],
           ),
         ),
