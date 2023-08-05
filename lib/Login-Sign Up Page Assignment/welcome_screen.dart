@@ -1,5 +1,5 @@
-import 'package:assignment/login_page.dart';
-import 'package:assignment/registration_page.dart';
+import './registration_page.dart';
+import './login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
