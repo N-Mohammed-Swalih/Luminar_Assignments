@@ -8,6 +8,7 @@ void main() {
   ));
 }
 
+// ignore: must_be_immutable
 class WhatsappChats extends StatelessWidget {
   var productname = [
     "Dad",
