@@ -3,7 +3,6 @@ import 'package:assignment/registration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -36,8 +35,8 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> LoginPage()));
-                
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => LoginPage()));
               },
               child: Text("Login"),
               style: ElevatedButton.styleFrom(
@@ -48,10 +47,13 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 30,),
-             ElevatedButton(
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
               onPressed: () {
-               Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistrationPage()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => RegistrationPage()));
               },
               child: Text("Sign Up"),
               style: ElevatedButton.styleFrom(
