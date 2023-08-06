@@ -33,7 +33,7 @@ class Fruitslist extends StatelessWidget {
     "Pomegranate",
   ];
   var unit = ["Kg", "Kg", "Doz", "Doz", "Kg", "Kg", "Doz", "Kg", "Kg"];
-  var price = ["20", "30", "10", "15", "13", "16", "25", "35", "32"];
+  var price = ["10", "5", "4", "3", "8", "9", "7", "11", "14"];
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class Fruitslist extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Text(
-            "Product list",
+            "Product List",
           ),
         ),
         actions: [
@@ -97,7 +97,7 @@ class Fruitslist extends StatelessWidget {
                           alignment: Alignment.topLeft,
                           child: Wrap(
                             children: [
-                              Text("Price:"),
+                              Text("Price:\$"),
                               Text(
                                 price[index],
                                 style: TextStyle(fontWeight: FontWeight.bold),
