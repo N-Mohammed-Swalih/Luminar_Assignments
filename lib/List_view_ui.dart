@@ -1,28 +1,124 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: ListViewUi()));
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Fruitslist(),
+  ));
 }
 
-class ListViewUi extends StatelessWidget {
-  ListViewUi({super.key});
+class Fruitslist extends StatelessWidget {
+  Fruitslist({super.key});
+
   var image = [
-    "https://png.pngtree.com/png-vector/20210522/ourmid/pngtree-apple-is-naturally-thirsty-and-healthy-png-image_3323218.jpg",
-    "https://images.unsplash.com/photo-1587735243615-c03f25aaff15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80",
+    "assets/Fruits/apple.png",
+    "assets/Fruits/orange.png",
+    "assets/Fruits/mango.png",
+    "assets/Fruits/banana.png",
+    "assets/Fruits/blackgrapes.png",
+    "assets/Fruits/greengrapes.png",
+    "assets/Fruits/pineapple.png",
+    "assets/Fruits/strawberry.png",
+    "assets/Fruits/pomegranate.png",
   ];
-
-  var description = ["Apple", "Orange"];
-
-  var price = [];
+  var name = [
+    "Apple",
+    "Orange",
+    "Mango",
+    "Banana",
+    "Grapes",
+    "Grapes",
+    "Pineapple",
+    "Strawberry",
+    "Pomegranate",
+  ];
+  var unit = ["Kg", "Kg", "Doz", "Doz", "Kg", "Kg", "Doz", "Kg", "Kg"];
+  var price = ["20", "30", "10", "15", "13", "16", "25", "35", "32"];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text("Product List"),
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "Product list",
           ),
-        )
-        );
+        ),
+        actions: [
+          Icon(Icons.shopping_cart),
+          SizedBox(
+            width: 15,
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: ListView.builder(
+            itemCount: 9,
+            itemBuilder: ((context, index) {
+              return Container(
+                height: 100,
+                child: Card(
+                  color: Colors.blueGrey[300],
+                  child: ListTile(
+                    leading: Image.asset(
+                      image[index],
+                      height: 85,
+                      width: 85,
+                    ),
+                    title: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Wrap(
+                            children: [
+                              Text("Name:"),
+                              Text(
+                                name[index],
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Wrap(
+                            children: [
+                              Text("Unit:"),
+                              Text(
+                                unit[index],
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Wrap(
+                            children: [
+                              Text("Price:"),
+                              Text(
+                                price[index],
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    trailing: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                      ),
+                      onPressed: () {},
+                      child: Text("Add To Cart"),
+                    ),
+                  ),
+                ),
+              );
+            })),
+      ),
+    );
   }
 }
