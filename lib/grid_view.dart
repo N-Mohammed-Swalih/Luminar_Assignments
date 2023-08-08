@@ -53,7 +53,10 @@ class GridViewCustom extends StatelessWidget {
           List.generate(
             6,
             (index) => Card(
-              child: Column(children: [
+              elevation: 5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
                 Container(
                   height: 150,
                   width: 150,
@@ -64,17 +67,27 @@ class GridViewCustom extends StatelessWidget {
                         fit: BoxFit.cover,
                       )),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 30),
-                  child: Text(productname[index],
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const Divider(thickness: 0.4,color: Colors.grey),
+                Container(
+                  width: 200,
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Center(
+                      child: Text(productname[index],
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Text(
                     "\$ " + productprice[index],
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ]),
