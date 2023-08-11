@@ -182,12 +182,12 @@ class DrawerAssignment extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 50,
+                    height: 30,
                   ),
                   ElevatedButton(
                     onPressed: () {},
                     child: Text(
-                      "LogOut",
+                      "Logout",
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.orange,
