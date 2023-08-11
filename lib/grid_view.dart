@@ -55,42 +55,42 @@ class GridViewCustom extends StatelessWidget {
             (index) => Card(
               elevation: 5,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: NetworkImage(networkimage[index]),
-                        fit: BoxFit.cover,
-                      )),
-                ),
-                const Divider(thickness: 0.4,color: Colors.grey),
-                Container(
-                  width: 200,
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: Center(
-                      child: Text(productname[index],
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16)),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                            image: NetworkImage(networkimage[index]),
+                            fit: BoxFit.cover,
+                          )),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text(
-                    "\$ " + productprice[index],
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                    const Divider(thickness: 0.4, color: Colors.grey),
+                    Container(
+                      width: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20),
+                        child: Center(
+                          child: Text(productname[index],
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 16)),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ]),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text(
+                        "\$ " + productprice[index],
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ]),
             ),
           ),
         ),
