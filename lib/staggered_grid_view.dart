@@ -9,16 +9,6 @@ void main() {
 }
 
 class Steaggerdgridexample2 extends StatelessWidget {
-  var icons = [
-    Icons.home,
-    Icons.search,
-    Icons.earbuds,
-    Icons.settings,
-    Icons.radar,
-    Icons.wallet,
-    Icons.padding,
-    Icons.ac_unit_sharp
-  ];
 
   var crosscount = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
   var maincount = [3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 2, 2];
