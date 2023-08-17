@@ -63,9 +63,9 @@ class MusicPlaylistPage extends StatelessWidget {
               itemCount: 8,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 20,
+                  crossAxisSpacing: 30,
                   mainAxisExtent : 190,
-                  mainAxisSpacing: 20),
+                  mainAxisSpacing: 30),
               itemBuilder: (context, index) => Container(
                 margin: EdgeInsets.only(left : 20,right: 20),
                     decoration: BoxDecoration(
