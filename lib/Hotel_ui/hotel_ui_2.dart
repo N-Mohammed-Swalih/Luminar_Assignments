@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -29,7 +28,7 @@ class _HotelUiState extends State<HotelUi> {
               "https://digital.ihg.com/is/image/ihg/crowne-plaza-kochi-3941030496-4x3",
               width: double.infinity,
               height: 400,
-                fit: BoxFit.cover),
+              fit: BoxFit.cover),
           const Positioned(
             bottom: 70,
             left: 20,
