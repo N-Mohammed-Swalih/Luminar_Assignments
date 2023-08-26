@@ -19,7 +19,7 @@ class Hotelwidget extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 200,
+            height: 300,
             width: double.infinity,
             decoration: BoxDecoration(
               image: DecorationImage(
