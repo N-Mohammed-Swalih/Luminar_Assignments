@@ -7,21 +7,47 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: whatsapplist
-            .map(
-              (contactpeople) => Card(
-                child: ListTile(
-                  title: Text(contactpeople['name']),
-                  subtitle: Text(contactpeople['statustime']),
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage(contactpeople['statusimage']),
-                  ),
-                ),
+        body: Column(
+      children: [
+        ListView(
+          children: <Widget>[
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.grey,
+                backgroundImage: NetworkImage(
+                    "https://www.includehelp.com/Members/images/aman-gautam.jpg"),
               ),
-            )
-            .toList(),
-      ),
-    );
+              title: Text(
+                "My status",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text("Tap to add status update"),
+            ),
+            Text(
+              "Recent updates",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).primaryColor),
+            ),
+            ListView(
+              children: whatsapplist
+                  .map(
+                    (contactpeople) => Card(
+                      child: ListTile(
+                        title: Text(contactpeople['name']),
+                        subtitle: Text(contactpeople['statustime']),
+                        leading: CircleAvatar(
+                          backgroundImage:
+                              NetworkImage(contactpeople['statusimage']),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ],
+        ),
+      ],
+    ));
   }
 }
