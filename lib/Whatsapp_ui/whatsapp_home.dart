@@ -70,7 +70,7 @@ class TabBar2 extends StatelessWidget {
             child: Text("Community"),
           ),
           WhatsappChats(),
-          const StatusScreen(),
+          StatusScreen(),
           CallList(),
         ]),
       ),
