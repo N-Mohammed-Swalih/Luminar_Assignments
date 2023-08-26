@@ -13,6 +13,7 @@ class WhatsappChatScreen extends StatelessWidget {
         whatsapplist.firstWhere((element) => element['id'] == contactpeopleId);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.teal,
         title: Center(child: Text(contactpeoplefromlist['name'])),
       ),
       body: Container(
