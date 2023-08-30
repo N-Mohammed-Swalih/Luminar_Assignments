@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:assignment/Hotel_ui/dummy_list.dart';
 import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HotelUi2(),
-  ));
-}
-
 class HotelUi2 extends StatefulWidget {
   HotelUi2({super.key});
 
@@ -56,7 +49,7 @@ class _HotelUi2State extends State<HotelUi2> {
           const Positioned(
             bottom: 36,
             left: 40,
-            child: Text("8.4/85 reviews",
+            child: Text("8.4/10 reviews",
                 style: TextStyle(fontSize: 15, color: Colors.white)),
           ),
           Positioned(
@@ -168,11 +161,11 @@ class _HotelUi2State extends State<HotelUi2> {
                   "About Us",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                 Padding(
+                Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Text(
                     listfromhotel['description'],
-                    style:const TextStyle(
+                    style: const TextStyle(
                         fontSize: 20,
                         wordSpacing: 2,
                         fontWeight: FontWeight.w500),
