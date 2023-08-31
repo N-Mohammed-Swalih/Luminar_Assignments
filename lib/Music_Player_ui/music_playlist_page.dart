@@ -7,9 +7,9 @@ void main() {
 }
 
 class MusicPlaylistPage extends StatelessWidget {
-   MusicPlaylistPage({super.key});
-  
-   var images = [
+  MusicPlaylistPage({super.key});
+
+  var images = [
     "https://t2.gstatic.com/images?q=tbn:ANd9GcSnZ1_QXPJEB6WUWuW792bgpkDEslzK-NpMGACok5MRUF3IjFSM",
     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQJQ7leSNIMiueq9vGdZaLayEeNpv_7kER7CbTiQrXuDbSm6XJz",
     "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT8SqpoSd9SEl7BJZz8oc7y2fHKV8oS6HV4JCrV8YubjDNWKN-3",
@@ -18,7 +18,7 @@ class MusicPlaylistPage extends StatelessWidget {
     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRTcApiRpNfXRjqIltqHYJvGKsPjAlPWMiNQ4l0rN5QOauLyDlw",
     "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRgFgdMIKhEoWNmWEND-dbJcjO7y_U1Zal7TAwQwGP4BBYMhpvZ",
     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRr3aqfIkZ3jTdonyyJj-DBOJzgNMVavOAnypoychMzLp7RXb7P"
-   ];
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -64,15 +64,15 @@ class MusicPlaylistPage extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 30,
-                  mainAxisExtent : 190,
+                  mainAxisExtent: 190,
                   mainAxisSpacing: 30),
               itemBuilder: (context, index) => Container(
-                margin: EdgeInsets.only(left : 20,right: 20),
+                    margin: EdgeInsets.only(left: 20, right: 20),
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(
-                              images[index]),
-                              fit: BoxFit.fill,),
+                        image: NetworkImage(images[index]),
+                        fit: BoxFit.fill,
+                      ),
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ))
