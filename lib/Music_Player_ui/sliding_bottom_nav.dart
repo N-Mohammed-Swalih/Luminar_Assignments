@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
+import 'music_home_page.dart';
 import 'music_playlist_page.dart';
 
 void main() {
@@ -121,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
 // icons size: 30 for MaterialIcons
 
 List<Widget> _listOfWidget = <Widget>[
-  Placeholder(),
+  MusicList(),
   Placeholder(),
   MusicPlaylistPage(),
   Placeholder(),

@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'dummy_list.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: MusicList(),
-  ));
-}
-
 class MusicList extends StatelessWidget {
   MusicList({super.key});
 
