@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:assignment/Hotel_ui/dummy_list.dart';
+import 'package:assignment/Hotel%20Booking%20App/dummy_list.dart';
 import 'package:flutter_pannable_rating_bar/flutter_pannable_rating_bar.dart';
 
 class HotelUi2 extends StatefulWidget {

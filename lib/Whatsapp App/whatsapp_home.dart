@@ -1,6 +1,6 @@
-import 'package:assignment/Whatsapp_ui/call_list_screen.dart';
-import 'package:assignment/Whatsapp_ui/status_screen.dart';
-import 'package:assignment/Whatsapp_ui/whatsapp_chats.dart';
+import 'package:assignment/Whatsapp%20App/call_list_screen.dart';
+import 'package:assignment/Whatsapp%20App/status_screen.dart';
+import 'package:assignment/Whatsapp%20App/whatsapp_chats.dart';
 import 'package:flutter/material.dart';
 
 import 'whatsapp_chat_screen.dart';

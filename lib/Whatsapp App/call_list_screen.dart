@@ -1,8 +1,8 @@
-import 'package:assignment/Whatsapp_ui/dummy_whatsapp_list.dart';
+import 'package:assignment/Whatsapp%20App/dummy_whatsapp_list.dart';
 import 'package:flutter/material.dart';
 
-class WhatsappChats extends StatelessWidget {
-  WhatsappChats({super.key});
+class CallList extends StatelessWidget {
+  CallList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,10 @@ class WhatsappChats extends StatelessWidget {
             .map(
               (contactpeople) => Card(
                 child: ListTile(
-                  onTap: ()=> gotochatscreen(context, contactpeople['id']),
+                  onTap: ()=> {},
                   title: Text(contactpeople['name']),
-                  subtitle: Text(contactpeople['message']),
-                  trailing: Text(contactpeople['messagetime']),
+                  subtitle: Text(contactpeople['calltime']),
+                  trailing: IconButton(onPressed: (){}, icon: Icon(Icons.phone)),
                   leading: CircleAvatar(
                     backgroundImage: AssetImage(contactpeople['image']),
                   ),
@@ -26,7 +26,7 @@ class WhatsappChats extends StatelessWidget {
       ),
     );
   }
-  gotochatscreen(BuildContext context, contactpeopleId) {
-    Navigator.pushNamed(context, 'details', arguments: contactpeopleId);
+  // gotocallagain(BuildContext context, contactpeopleId) {
+  //   Navigator.pushNamed(context, 'details', arguments: contactpeopleId);
   }
-}
+

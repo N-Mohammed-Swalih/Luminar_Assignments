@@ -1,4 +1,4 @@
-import 'package:assignment/Whatsapp_ui/dummy_whatsapp_list.dart';
+import 'package:assignment/Whatsapp%20App/dummy_whatsapp_list.dart';
 import 'package:flutter/material.dart';
 
 class WhatsappChatScreen extends StatelessWidget {

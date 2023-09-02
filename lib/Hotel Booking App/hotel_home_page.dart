@@ -1,6 +1,6 @@
-import 'package:assignment/Hotel_ui/dummy_list.dart';
-import 'package:assignment/Hotel_ui/hotel_ui_2.dart';
-import 'package:assignment/Hotel_ui/hotel_widget.dart';
+import 'package:assignment/Hotel%20Booking%20App/dummy_list.dart';
+import 'package:assignment/Hotel%20Booking%20App/hotel_ui_2.dart';
+import 'package:assignment/Hotel%20Booking%20App/hotel_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {

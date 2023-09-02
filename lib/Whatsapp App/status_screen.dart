@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:assignment/Whatsapp_ui/dummy_whatsapp_list.dart';
+import 'package:assignment/Whatsapp%20App/dummy_whatsapp_list.dart';
 
 class StatusScreen extends StatelessWidget {
   const StatusScreen({super.key});
