@@ -42,7 +42,20 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              IconButton(onPressed: () {}, icon: Icon(Icons.location_on))
+              Row(
+                children: [
+                  const Icon(Icons.location_on),
+                  const SizedBox(
+                    width: 5,
+                  ),
+                  const Text(
+                    'Maradu,Kochi',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  IconButton(
+                      onPressed: () {}, icon: const Icon(Icons.arrow_drop_down))
+                ],
+              )
             ],
           ),
           bottom: AppBar(
@@ -110,6 +123,7 @@ class HomePage extends StatelessWidget {
             expandImageHeight: 100,
             expandImageWidth: 300,
             autoPlay: true,
+            imageRadius: 10,
             showIndicator: false,
             isClickable: false,
           ),
