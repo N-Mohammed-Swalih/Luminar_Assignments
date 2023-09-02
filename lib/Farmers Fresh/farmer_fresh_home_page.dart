@@ -1,3 +1,4 @@
+import 'package:fan_carousel_image_slider/fan_carousel_image_slider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +12,14 @@ class HomePage extends StatelessWidget {
     'PACKED FOODS',
     'FOOD GRAINS',
     'BEVERAGES'
+  ];
+
+  var sampleImages = [
+    'assets/farmerfresh/ashirvad.jpg',
+    'assets/farmerfresh/avt.png',
+    'assets/farmerfresh/offer.jpg',
+    'assets/farmerfresh/cocacola.jpg',
+    'assets/farmerfresh/tide.jpg',
   ];
 
   @override
@@ -33,7 +42,7 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              IconButton(onPressed: (){}, icon: Icon(Icons.location_on))
+              IconButton(onPressed: () {}, icon: Icon(Icons.location_on))
             ],
           ),
           bottom: AppBar(
@@ -90,7 +99,21 @@ class HomePage extends StatelessWidget {
                       ),
                     );
                   })),
-        ))
+        )),
+        SliverToBoxAdapter(
+          child: FanCarouselImageSlider(
+            sliderWidth: MediaQuery.sizeOf(context).width,
+            sliderHeight: 300,
+            imagesLink: sampleImages,
+            imageFitMode: BoxFit.fill,
+            isAssets: true,
+            expandImageHeight: 100,
+            expandImageWidth: 300,
+            autoPlay: true,
+            showIndicator: false,
+            isClickable: false,
+          ),
+        )
       ])),
     );
   }

@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter 
   font_awesome_flutter: ^10.5.0
+  fan_carousel_image_slider:
   flutter_pannable_rating_bar: ^2.7.2+1
   sliding_clipped_nav_bar: ^3.1.0+4  
   google_fonts: ^5.1.0
@@ -29,3 +30,4 @@ flutter:
     - assets/contact_list/
     - assets/Fruits/
     - assets/avatar.png
+    - assets/farmerfresh/
