@@ -6,11 +6,11 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   var categoryimages = [
-    'assets/farmerfresh/categoryimages/vegetables.jpg',
+    'assets/farmerfresh/categoryimages/vegetables.avif',
+    'assets/farmerfresh/categoryimages/fruits.jpeg',
     'assets/farmerfresh/categoryimages/packagedfoods.jpg',
+    'assets/farmerfresh/categoryimages/pulses.avif',
     'assets/farmerfresh/categoryimages/beverages.jpg',
-    'assets/farmerfresh/categoryimages/fruits.jpg',
-    'assets/farmerfresh/categoryimages/pulses.jpg',
     'assets/farmerfresh/categoryimages/stationaries.jpg',
   ];
 

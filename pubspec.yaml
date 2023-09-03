@@ -8,7 +8,8 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter 
+    sdk: flutter
+  flutter_svg: ^2.0.7   
   font_awesome_flutter: ^10.5.0
   fan_carousel_image_slider:
   flutter_pannable_rating_bar: ^2.7.2+1
