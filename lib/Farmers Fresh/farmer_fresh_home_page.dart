@@ -6,12 +6,12 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   var categoryimages = [
-    'assets/farmerfresh/categoryimages/vegetables.avif',
-    'assets/farmerfresh/categoryimages/fruits.jpeg',
-    'assets/farmerfresh/categoryimages/packagedfoods.jpg',
-    'assets/farmerfresh/categoryimages/pulses.avif',
-    'assets/farmerfresh/categoryimages/beverages.jpg',
-    'assets/farmerfresh/categoryimages/stationaries.jpg',
+    'assets/farmerfresh/categoryimages/vegetables.png',
+    'assets/farmerfresh/categoryimages/fruits.png',
+    'assets/farmerfresh/categoryimages/packagedfoods.png',
+    'assets/farmerfresh/categoryimages/pulses.png',
+    'assets/farmerfresh/categoryimages/beverages.png',
+    'assets/farmerfresh/categoryimages/stationaries.png',
   ];
 
   var categoryname = [
@@ -140,7 +140,7 @@ class HomePage extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(20.0),
               child: Container(
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.grey.shade300)),
@@ -189,32 +189,35 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.4,
+                  height: MediaQuery.of(context).size.height * 0.45,
                   child: GridView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 6,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        mainAxisExtent: 180,
+                        mainAxisExtent: 200,
                         mainAxisSpacing: 0,
                         crossAxisSpacing: 10,
                       ),
-                      itemBuilder: (context, index) => Container(
-                            margin: EdgeInsets.only(left: 5, right: 5),
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              children: [
-                                Image.asset(
-                                  categoryimages[index],
-                                  fit: BoxFit.cover,
-                                  height: 100,
-                                  width: 100,
-                                ),
-                                Text(categoryname[index]),
-                              ],
+                      itemBuilder: (context, index) => Card(
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey.shade300),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Image.asset(
+                                    categoryimages[index],
+                                    fit: BoxFit.fill,
+                                    height: 100,
+                                    width: 120,
+                                  ),
+                                  Text(categoryname[index]),
+                                ],
+                              ),
                             ),
                           )),
                 ),
