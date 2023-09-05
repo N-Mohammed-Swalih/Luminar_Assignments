@@ -220,18 +220,16 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              // SliverToBoxAdapter(
-              //   child: ListView.builder(
-              //     itemCount: 10,
-              //       itemBuilder: (context, index) => Card(
-              //         child: ListTile(
-              //           leading: Container(
-              //             color: Colors.red.shade700,
-              //             height: 50,
-              //             width: 10,
-              //           ),
-              //         ),
-              //       )),
+              // SliverList.builder(
+              //   itemCount: 10,
+              //   itemBuilder: (context, index) => Card(
+              //     child: ListTile(
+              //       leading: Container(
+              //         color: Colors.red.shade700,
+              //         width: 10,
+              //       ),
+              //     ),
+              //   ),
               // ),
             ],
           ),
