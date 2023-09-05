@@ -14,13 +14,20 @@ class HomePage extends StatelessWidget {
 
   var Functionnames = [
     'My Account',
-    'Load e-Sewa',
     'Payment',
+    'Load e-Sewa',
     'Fund Transfer',
     'Schedule Payment',
     'Scan To Pay'
   ];
-  var images = ['assets/bankappui/avatar.png'];
+  var images = [
+    'assets/bankappui/avatar.png',
+    'assets/bankappui/payments.png',
+    'assets/bankappui/esewa.png',
+    'assets/bankappui/transfer.png',
+    'assets/bankappui/schedule.png',
+    'assets/bankappui/scanner.png',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -147,46 +154,85 @@ class HomePage extends StatelessWidget {
                       FontAwesomeIcons.fan,
                       color: Colors.red.shade700,
                     ),
+                    const SizedBox(
+                      width: 15,
+                    ),
                     const Text(
                       'WOULD YOU LIKE TO?',
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.45,
-                child: GridView.builder(
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.45,
+                  child: GridView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: 6,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisExtent: 200,
-                      mainAxisSpacing: 0,
+                      mainAxisExtent: 150,
+                      mainAxisSpacing: 12,
                       crossAxisSpacing: 10,
                     ),
-                    itemBuilder: (context, index) => Card(
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey.shade300),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Image.network(images[index],
-                                height: 50,
-                                width: 50,),
-                                Text(Functionnames[index]),
-                              ],
-                            ),
+                    itemBuilder: (context, index) => Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Image.network(
+                            images[index],
+                            height: 50,
+                            width: 50,
                           ),
-                        )),
+                          Text(Functionnames[index]),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  children: [
+                    FaIcon(
+                      FontAwesomeIcons.moneyBill,
+                      color: Colors.red.shade700,
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    const Text(
+                      'LAST TRANSACTIONS',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              // SliverToBoxAdapter(
+              //   child: ListView.builder(
+              //     itemCount: 10,
+              //       itemBuilder: (context, index) => Card(
+              //         child: ListTile(
+              //           leading: Container(
+              //             color: Colors.red.shade700,
+              //             height: 50,
+              //             width: 10,
+              //           ),
+              //         ),
+              //       )),
+              // ),
             ],
           ),
         )
