@@ -1,5 +1,5 @@
+import 'package:assignment/Crud_sqflite_login_registration/registration_page.dart';
 import 'package:flutter/material.dart';
-import 'package:luminar_sample_project/storages%20in%20flutter/sqflite%20crud/registration_page.dart';
 
 import 'login_page.dart';
 
@@ -26,7 +26,7 @@ class WelcomePage extends StatelessWidget {
               Container(
                 height: 300,
                 width: 300,
-                child: Image.asset('assets/images/welcome.png'),
+                child: Image.asset('assets/welcome.png'),
               ),
               const SizedBox(
                 height: 160,

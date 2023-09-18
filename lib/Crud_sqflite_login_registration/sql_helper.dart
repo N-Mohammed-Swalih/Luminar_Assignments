@@ -37,12 +37,26 @@ class SQLHelperAssignment {
 
   static Future<List<Map>> CheckLogin(String username, String password) async {
     final db = await SQLHelperAssignment.createDB();
-final data = await db.rawQuery(
-    "SELECT * FROM users WHERE accmail= '$username' AND pass = '$password' ");
+    final data = await db.rawQuery(
+        "SELECT * FROM users WHERE accmail= '$username' AND pass = '$password' ");
     print(data.toString());
     if (data.isNotEmpty) {
       return data;
     }
     return data;
+  }
+
+  static Future<List<Map<String, dynamic>>> getAll() async {
+    final db = await SQLHelperAssignment.createDB();
+    return db.query('users', orderBy: 'id');
+  }
+
+  static Future<void> deleteuser(int id) async {
+    final db = await SQLHelperAssignment.createDB();
+    try {
+      await db.delete('users', where: 'id = ?', whereArgs: [id]);
+    } catch (e) {
+      throw Exception();
+    }
   }
 }
