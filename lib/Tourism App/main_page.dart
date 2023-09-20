@@ -2,11 +2,15 @@ import 'package:assignment/Tourism%20App/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'details_page.dart';
+
 void main() {
   runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ToursimInitPage(),
-  ));
+      debugShowCheckedModeBanner: false,
+      home: ToursimInitPage(),
+      routes: {
+        'details': (context) => PlaceDetails(),
+      }));
 }
 
 class ToursimInitPage extends StatelessWidget {

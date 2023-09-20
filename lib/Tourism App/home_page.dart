@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'dummy_list.dart';
+
 class TourismHomePage extends StatelessWidget {
   const TourismHomePage({super.key});
 
@@ -32,7 +34,12 @@ class TourismHomePage extends StatelessWidget {
             ),
           ],
         ),
-        actions: [CircleAvatar()],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: CircleAvatar(),
+          )
+        ],
         centerTitle: true,
         bottom: AppBar(
           backgroundColor: Colors.white,
@@ -40,38 +47,112 @@ class TourismHomePage extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          TextField(
-            decoration: InputDecoration(
-              fillColor: Colors.grey,
-              hintStyle: TextStyle(color: Colors.grey),
-              hintText: "Search...",
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey, width: 0.5),
+      body: CustomScrollView(slivers: [
+        SliverToBoxAdapter(
+          child: Container(
+            height: 30,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Popular Places",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Text("View All"),
+                ],
               ),
-              suffixIconColor: Colors.grey,
-              suffixIcon: Icon(Icons.search),
             ),
           ),
-          Padding(
+        ),
+        // SizedBox(
+        //   height: 25,
+        // ),
+        SliverToBoxAdapter(
+          child: GridView(
+            shrinkWrap: true,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            children: placelist
+                .map(
+                  (iteratedplace) => Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        gotonextpage(context, iteratedplace['id']);
+                      },
+                      child: Container(
+                          height: 200,
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(iteratedplace["image"]))),
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                top: 10,
+                                left: 10,
+                                child: Container(
+                                  height: 40,
+                                  width: 70,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue[900],
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Center(
+                                    child: Padding(
+                                      padding: EdgeInsets.all(8),
+                                      child: Text(
+                                        "00",
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 15,
+                                bottom: 15,
+                                child: Text(
+                                  iteratedplace["name"],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              )
+                            ],
+                          )),
+                    ),
+                  ),
+                )
+                .toList(),
+          ),
+        ),
+        SliverToBoxAdapter(
+            child: Container(
+          height: 60,
+          child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Popular Places",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-                Text(
-                  "View all",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                ),
-              ],
+            child: ElevatedButton(
+              style:
+                  ElevatedButton.styleFrom(backgroundColor: Colors.blue[700]),
+              onPressed: () {},
+              child: Text("Explore Now"),
             ),
-          )
-        ],
-      ),
+          ),
+        ))
+      ]),
     );
+  }
+
+  void gotonextpage(BuildContext context, iteratedplaceId) {
+    Navigator.pushNamed(context, 'details', arguments: iteratedplaceId);
   }
 }
