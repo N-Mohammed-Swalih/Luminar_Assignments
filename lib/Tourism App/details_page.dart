@@ -27,7 +27,7 @@ class PlaceDetails extends StatelessWidget {
                   Column(
                     children: [
                       Text(
-                        iteratedplaceFromlist['description'],
+                        '${iteratedplaceFromlist['pageheading']}',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -58,7 +58,7 @@ class PlaceDetails extends StatelessWidget {
                   "About Place",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Text(iteratedplaceFromlist['about']),
+                Text('${iteratedplaceFromlist['about']}'),
               ],
             ),
           ),

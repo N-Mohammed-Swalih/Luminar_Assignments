@@ -106,7 +106,7 @@ class TourismHomePage extends StatelessWidget {
                                     child: Padding(
                                       padding: const EdgeInsets.all(8),
                                       child: Text(
-                                        iteratedplace["id"],
+                                        iteratedplace["listcount"],
                                         style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
