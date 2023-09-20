@@ -2,6 +2,7 @@ List<Map<String, dynamic>> placelist= [
   {
     'id': '1',
     'name': 'Furious Place',
+    'rating' : '2',
     'image':
         'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1886&q=80',
     'listcount' : '7050',
@@ -14,6 +15,7 @@ As you step onto the famous Copacabana Beach, you're immediately swept up in the
     {
     'id': '2',
     'name': 'Luxury Place',
+    'rating' : '4',
     'image':
         'https://images.unsplash.com/photo-1630587148265-761cbd139043?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80',
     'listcount' : '7051',
@@ -23,6 +25,7 @@ As you step onto the famous Copacabana Beach, you're immediately swept up in the
     {
     'id': '3',
     'name': 'Favourite Place',
+    'rating' : '3',
     'image':
         'https://images.unsplash.com/photo-1506260408121-e353d10b87c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1856&q=80',
     'listcount' : '7050',
@@ -38,6 +41,7 @@ As you step onto the famous Copacabana Beach, you're immediately swept up in the
     'image':
         'https://images.unsplash.com/photo-1580250642511-1660fe42ad58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80',
     'listcount' : '7051',
+    'rating' : '4',
     'about':
         '''
 Volcanic eruptions | IFRC

@@ -16,16 +16,181 @@ class PlaceDetails extends StatelessWidget {
       appBar: AppBar(
         title: Text(iteratedplaceFromlist['name']),
       ),
-      body: Column(
+      body: ListView(
         children: [
-          Center(
+          Container(
+            height: 100,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        iteratedplaceFromlist['description'],
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(iteratedplaceFromlist['rating']),
+                    ],
+                  ),
+                  Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(iteratedplaceFromlist['image'])),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 130,
+            child: Column(
+              children: [
+                Text(
+                  "About Place",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Text(iteratedplaceFromlist['about']),
+              ],
+            ),
+          ),
+          const Text(
+            "Special Facilities",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Container(
+            height: 50,
+            child: const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Wrap(
+                  children: [
+                    Icon(
+                      Icons.local_parking_outlined,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Parking",
+                      style: TextStyle(color: Colors.blue),
+                    )
+                  ],
+                ),
+                Wrap(
+                  children: [
+                    Icon(
+                      Icons.support_agent,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "24x7 Support",
+                      style: TextStyle(color: Colors.blue),
+                    )
+                  ],
+                ),
+                Wrap(
+                  children: [
+                    Icon(
+                      Icons.wifi,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Free WiFi",
+                      style: TextStyle(color: Colors.blue),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
             child: Container(
-              height: MediaQuery.of(context).size.height * .5,
-              width: MediaQuery.of(context).size.width * .5,
+              height: 250,
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: NetworkImage(iteratedplaceFromlist['image']))),
+                borderRadius: BorderRadius.circular(15),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(iteratedplaceFromlist['image2']),
+                ),
+              ),
+            ),
+          ),
+          const Text(
+            "Special Facilities",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Container(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.lightBlue,
+                  ),
+                  child: const Column(
+                    children: [
+                      Text("Adult"),
+                      Text("02"),
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.lightBlue,
+                  ),
+                  child: const Column(
+                    children: [
+                      Text("Adult"),
+                      Text("02"),
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.lightBlue,
+                  ),
+                  child: const Column(
+                    children: [
+                      Text("Adult"),
+                      Text("02"),
+                    ],
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Colors.lightBlue,
+                  ),
+                  child: const Column(
+                    children: [
+                      Text("Adult"),
+                      Text("02"),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 60,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text("Explore now"),
+              ),
             ),
           ),
         ],
