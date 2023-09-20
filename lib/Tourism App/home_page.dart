@@ -35,8 +35,8 @@ class TourismHomePage extends StatelessWidget {
           ],
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
+          const Padding(
+            padding: EdgeInsets.all(10.0),
             child: CircleAvatar(),
           )
         ],
@@ -51,8 +51,8 @@ class TourismHomePage extends StatelessWidget {
         SliverToBoxAdapter(
           child: Container(
             height: 30,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -72,8 +72,8 @@ class TourismHomePage extends StatelessWidget {
         SliverToBoxAdapter(
           child: GridView(
             shrinkWrap: true,
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
             children: placelist
                 .map(
                   (iteratedplace) => Padding(
@@ -104,10 +104,10 @@ class TourismHomePage extends StatelessWidget {
                                   ),
                                   child: Center(
                                     child: Padding(
-                                      padding: EdgeInsets.all(8),
+                                      padding: const EdgeInsets.all(8),
                                       child: Text(
-                                        "00",
-                                        style: TextStyle(
+                                        iteratedplace["id"],
+                                        style: const TextStyle(
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold),
                                       ),
@@ -144,7 +144,7 @@ class TourismHomePage extends StatelessWidget {
               style:
                   ElevatedButton.styleFrom(backgroundColor: Colors.blue[700]),
               onPressed: () {},
-              child: Text("Explore Now"),
+              child: const Text("Explore Now"),
             ),
           ),
         ))
