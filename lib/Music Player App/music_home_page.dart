@@ -9,9 +9,10 @@ class MusicList extends StatelessWidget {
   var songimages = [
     'https://m.media-amazon.com/images/M/MV5BMmMxOWQ0YzgtZGJhYy00ZGQ5LTk4MTMtYjhlMWJiZGIyNTM0XkEyXkFqcGdeQXVyMTA0MDM3NDg4._V1_FMjpg_UY2000_.jpg',
     'https://gumlet.assettype.com/filmcompanion%2F2023-06%2Fdd309759-78e6-4e0e-afa5-9762cce63138%2F2__22_.jpg?format=auto',
-    'https://www.thetelugufilmnagar.com/wp-content/uploads/2023/03/pathuthala.webp',
+    'https://thetelugufilmnagar.com/wp-content/uploads/2023/03/pathuthala.webp',
     'https://i.scdn.co/image/ab67616d0000b2738bda34105de5623bae6bf02e',
-    'https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/39/bc/e1/39bce1b3-f752-75e9-fb7e-60953266be4c/196925478762.jpg/600x600bf-60.jpg'
+    'https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/39/bc/e1/39bce1b3-f752-75e9-fb7e-60953266be4c/196925478762.jpg/600x600bf-60.jpg',
+    'https://c.saavncdn.com/408/Shiddat-Hindi-2021-20210922172609-500x500.jpg'
   ];
 
   var songname = [
@@ -19,7 +20,17 @@ class MusicList extends StatelessWidget {
     'Naa Ready',
     'Pathu Thala',
     'Vaa Vaathi',
-    'Thenmozhi'
+    'Thenmozhi',
+    'Chitta'
+  ];
+
+  var songslist = [
+    "assets/audios/farzi.mp3",
+    "assets/audios/audio.mp3",
+    "",
+    "",
+    "",
+    "assets/audios/shiddat.mp3"
   ];
 
   var playlistimages = [
@@ -38,7 +49,8 @@ class MusicList extends StatelessWidget {
     'Anirudh Ravichander',
     'A.R.Rahman',
     'G.V.Prakash',
-    'Santhosh Narayanan'
+    'Santhosh Narayanan',
+    'Manan bhardwaj'
   ];
 
   @override
@@ -119,7 +131,7 @@ class MusicList extends StatelessWidget {
           Expanded(
               child: ListView.builder(
                   shrinkWrap: true,
-                  itemCount: 5,
+                  itemCount: singername.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                       height: 90,
@@ -155,7 +167,7 @@ class MusicList extends StatelessWidget {
                               IconButton(
                                 onPressed: () {
                                   AssetsAudioPlayer.newPlayer().open(
-                                    Audio("assets/audios/farzi.mp3"),
+                                    Audio(songslist[index]),
                                     autoStart: true,
                                     showNotification: true,
                                   );

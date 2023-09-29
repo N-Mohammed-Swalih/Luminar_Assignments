@@ -1,4 +1,3 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
@@ -6,10 +5,10 @@ import 'music_home_page.dart';
 import 'music_playlist_page.dart';
 
 void main() {
-  // AssetsAudioPlayer.setupNotificationsOpenAction((notification) {
-  //   return true;
-  // });
-  runApp(MaterialApp(home: BottomNavBarMusic()));
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BottomNavBarMusic()));
 }
 
 class BottomNavBarMusic extends StatelessWidget {
