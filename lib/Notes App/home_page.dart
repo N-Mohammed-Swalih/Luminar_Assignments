@@ -4,6 +4,8 @@ import 'package:hive/hive.dart';
 
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'notes_page.dart';
+
 class HomeScreenNotesApp extends StatefulWidget {
   HomeScreenNotesApp({super.key});
 
@@ -194,7 +196,7 @@ class _HomeScreenNotesAppState extends State<HomeScreenNotesApp> {
                     controller: notes_heading_controller,
                     decoration: const InputDecoration(
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: Colors.grey,
                       border: OutlineInputBorder(),
                       hintText: "Notes Heading",
                     ),
@@ -205,10 +207,19 @@ class _HomeScreenNotesAppState extends State<HomeScreenNotesApp> {
                   TextField(
                     controller: notes_content_controller,
                     decoration: const InputDecoration(
-                        filled: true, //<-- SEE HERE
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(),
-                        hintText: "Note"),
+                      filled: true,
+                      // suffixIcon: IconButton(
+                      //   onPressed: () {
+                      //     Navigator.of(context).pushReplacement(
+                      //         MaterialPageRoute(
+                      //             builder: (context) => NotesfieldPage()));
+                      //   },
+                      //   icon: Icon(Icons.arrow_forward),
+                      // ),
+                      fillColor: Colors.grey,
+                      border: OutlineInputBorder(),
+                      hintText: "Note",
+                    ),
                   ),
                   const SizedBox(
                     height: 20,
@@ -234,11 +245,11 @@ class _HomeScreenNotesAppState extends State<HomeScreenNotesApp> {
                       notes_heading_controller.text = "";
                       Navigator.of(context).pop();
                     },
-                    child: Text(itemkey == null ? 'Create Note' : 'Edit Note'),
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
                         backgroundColor: Colors.orange),
+                    child: Text(itemkey == null ? 'Create Note' : 'Edit Note'),
                   ),
                 ],
               ),
