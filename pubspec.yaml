@@ -24,7 +24,8 @@ dependencies:
   hive_flutter: ^1.1.0
   get: ^4.6.6
   email_validator: ^2.1.17
-  cached_network_image:   
+  cached_network_image:
+  assets_audio_player: ^3.1.1   
 
 dev_dependencies:
   flutter_test:
@@ -44,3 +45,4 @@ flutter:
     - assets/bankappui/
     - assets/tourismapp/
     - assets/
+    - assets/audios/

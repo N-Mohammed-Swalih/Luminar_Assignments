@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 import 'dummy_list.dart';
@@ -147,12 +148,31 @@ class MusicList extends StatelessWidget {
                               fontSize: 15,
                             ),
                           ),
-                          trailing: IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.download,
-                                color: Colors.pinkAccent.shade100,
-                              )),
+                          trailing: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  AssetsAudioPlayer.newPlayer().open(
+                                    Audio("assets/audios/farzi.mp3"),
+                                    autoStart: true,
+                                    showNotification: true,
+                                  );
+                                },
+                                icon: Icon(
+                                  Icons.play_arrow,
+                                  color: Colors.pinkAccent.shade100,
+                                ),
+                              ),
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.download,
+                                    color: Colors.pinkAccent.shade100,
+                                  )),
+                            ],
+                          ),
                         ),
                       ),
                     );
